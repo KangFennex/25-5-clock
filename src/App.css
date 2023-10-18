@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./assets/autumnLeaves.jpeg");
+  background-size: cover;
+
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  box-shadow: inset 0 0 0 10px black, 0 0 10px black;
+  background-image: url("./assets/checkeredBg.png");
+  color: #cecaca;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  position: absolute;
+  top: 15px;
+}
+
+button {
+  background: transparent;
+  background-color: rgb(205, 205, 205, 0.2);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+
+.lengths {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.8rem;
+  gap: 10px;
+  margin-top: 4rem;
+}
+
+.lengths h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.setters {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.setters span {
+  min-width: 2rem;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+  margin-top: 0.5rem;
+}
+
+.time-display {
+  background-color: rgb(98, 96, 96);
+  padding: 0.3rem 1rem;
+  border-radius: 15px;
+  font-size: 2rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+#control {
+  display: flex;
+}
+
+.piece {
+  background-color: black;
+  position: absolute;
+  z-index: 1;
+}
+
+.piece:first-child {
+  width: 20px;
+  height: 30px;
+  top: -25px;
+  left: 135px;
+}
+
+.piece:nth-child(2) {
+  width: 50px;
+  height: 15px;
+  top: -40px;
+  left: 120px;
+  border-radius: 5px;
+  box-shadow: inset 3px 10px 10px rgba(247, 247, 247, 0.3);
+}
+
+.piece:nth-child(3) {
+  width: 15px;
+  height: 16px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  transform: rotate(-30deg);
+  top: 20px;
+  left: 45px;
+}
+
+.piece:nth-child(4) {
+  width: 15px;
+  height: 16px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  transform: rotate(30deg);
+  top: 20px;
+  right: 45px;
+}
+
+.attribution {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.attribution h4 {
+  color: black;
+  z-index: 1;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: black;
+}
